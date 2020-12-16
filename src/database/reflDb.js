@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-mongoose.connect('mongodb+srv://Emmanuel:Emmanuel@dj12345@emmanuel.haizz.mongodb.net/reflexology?retryWrites=true&w=majority', {
+mongoose.connect(process.env.MONGODB_URL, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useCreateIndex: true,
