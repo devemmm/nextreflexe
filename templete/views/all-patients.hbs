@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Genuene | Reflexology Patient All</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="keyword" content=" nextreflexes.com, next reflex,Genuine Reflexology Center, Reflexology In Kigali, Massage in Kigali, Physiotherapy in KIgali Rwanda">
+    <meta name="author" content="WrapTheme, design by: Emmanuel NTIVUGURUZWA">
+    <link rel="shortcut icon" href="/images/icons/icon-48x48.png" />
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- VENDOR CSS -->
+    <link rel="stylesheet" href="/assets/vendor/fullcalendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/vendor/font-awesome/css/font-awesome.min.css">
+
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="/assets/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/assets/css/color_skins.css">
+</head>
+
+<body class="theme-green">
+
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="m-t-30"><img src="/assets/images/logo-icon.svg" width="48" height="48" alt="Emmanuel"></div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- Overlay For Sidebars -->
+
+    <div id="wrapper">
+
+        {{!-- Admin Navbar --}}
+
+        {{>admin_nav_bar}}
+
+        <div id="left-sidebar" class="sidebar">
+            <div class="sidebar-scroll">
+                <div class="user-account">
+                    <img src="{{user.profilePhoto}}" class="rounded-circle user-photo" alt="User Profile Picture">
+                    <div class="dropdown">
+                        <span>Welcome,</span>
+                        <a href="javascript:void(0);" class="dropdown-toggle user-name" data-toggle="dropdown"><strong>Dr. {{user.fname}}  {{user.lname}}</strong></a>
+                        <ul class="dropdown-menu dropdown-menu-right account">
+                            <li><a href="/admin/home"><i class="icon-user"></i>My Profile</a></li>
+                            <li><a href="/admin/home"><i class="icon-envelope-open"></i>Messages</a></li>
+                            <li><a href="javascript:void(0);"><i class="icon-settings"></i>Settings</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/admin/logout"><i class="icon-power"></i>Logout</a></li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <ul class="row list-unstyled">
+                        <li class="col-4">
+                            <small>Exp</small>
+                            <h6>14</h6>
+                        </li>
+                        <li class="col-4">
+                            <small>Awards</small>
+                            <h6>13</h6>
+                        </li>
+                        <li class="col-4">
+                            <small>Clients</small>
+                            <h6>213</h6>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#sub_menu"><i class="icon-grid"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Chat"><i class="icon-book-open"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#setting"><i class="icon-settings"></i></a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <!-- Tab panes -->
+                <div class="tab-content p-l-0 p-r-0">
+                    <div class="tab-pane active" id="menu">
+                        <nav class="sidebar-nav">
+                            <ul class="main-menu metismenu">
+                                <li><a href="/admin/home"><i class="icon-home"></i><span>Dashboard</span></a></li>
+                                <li><a href="/admin/appointment"><i class="icon-calendar"></i>Appointment</a></li>
+                                <li><a href="/admin/taskboard"><i class="icon-list"></i>Taskboard</a></li>
+
+                                <li class="active"><a href="javascript:void(0);" class="has-arrow"><i class="icon-user"></i><span>Patients</span> </a>
+                                    <ul>
+                                        <li><a href="/admin/all-patients">All Patients</a></li>
+                                        <li><a href="/admin/add-patient">Add Patient</a></li>
+                                        <li><a href="/admin/patient-medical-form">Medical Form</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="/admin/world-wide-center"><i class="icon-pointer"></i>WorldWide Centres</a></li>
+
+                                <li>
+                                    <a href="#Widgets" class="has-arrow"><i class="icon-puzzle"></i><span>Widgets</span></a>
+                                    <ul>
+                                        <li><a href="/admin/statistics-widget">Statistics Widgets</a></li>
+                                        <li><a href="/admin/weather-Widget">Weather Widgets</a></li>
+                                        <li><a href="/admin/weather-Widget">Weather Widgets</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="tab-pane" id="sub_menu">
+                        <nav class="sidebar-nav">
+                            <ul class="main-menu metismenu">
+                                <li>
+                                    <a href="#uiElements" class="has-arrow"><i class="icon-diamond"></i> <span>UI Elements</span></a>
+                                    <ul>
+                                        <li><a href="#">Typography</a></li>
+
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#forms" class="has-arrow"><i class="icon-pencil"></i> <span>Forms</span></a>
+                                    <ul>
+                                        <li><a href="#">Form Validation</a></li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="tab-pane p-l-15 p-r-15" id="Chat">
+                        <form>
+                            <div class="input-group m-b-20">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="icon-magnifier"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Search...">
+                            </div>
+                        </form>
+
+                    </div>
+                    <div class="tab-pane p-l-15 p-r-15" id="setting">
+                        <h6>Choose Skin</h6>
+                        <ul class="choose-skin list-unstyled">
+                            <li data-theme="purple">
+                                <div class="purple"></div>
+                                <span>Purple</span>
+                            </li>
+                            <li data-theme="blue">
+                                <div class="blue"></div>
+                                <span>Blue</span>
+                            </li>
+                            <li data-theme="cyan" class="active">
+                                <div class="cyan"></div>
+                                <span>Cyan</span>
+                            </li>
+                            <li data-theme="green">
+                                <div class="green"></div>
+                                <span>Green</span>
+                            </li>
+                            <li data-theme="orange">
+                                <div class="orange"></div>
+                                <span>Orange</span>
+                            </li>
+                            <li data-theme="blush">
+                                <div class="blush"></div>
+                                <span>Blush</span>
+                            </li>
+                        </ul>
+                        <hr>
+                        <h6>General Settings</h6>
+                        <ul class="setting-list list-unstyled">
+                            <li>
+                                <label class="fancy-checkbox">
+                                <input type="checkbox" name="checkbox">
+                                <span>Report Panel Usag</span>
+                            </label>
+                            </li>
+                            <li>
+                                <label class="fancy-checkbox">
+                                <input type="checkbox" name="checkbox">
+                                <span>Email Redirect</span>
+                            </label>
+                            </li>
+                            <li>
+                                <label class="fancy-checkbox">
+                                <input type="checkbox" name="checkbox" checked>
+                                <span>Notifications</span>
+                            </label>
+                            </li>
+                            <li>
+                                <label class="fancy-checkbox">
+                                <input type="checkbox" name="checkbox" checked>
+                                <span>Auto Updates</span>
+                            </label>
+                            </li>
+                            <li>
+                                <label class="fancy-checkbox">
+                                <input type="checkbox" name="checkbox">
+                                <span>Offline</span>
+                            </label>
+                            </li>
+                            <li>
+                                <label class="fancy-checkbox">
+                                <input type="checkbox" name="checkbox" checked>
+                                <span>Location Permission</span>
+                            </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <div class="row">
+                    <div class="col-lg-6 col-md-8 col-sm-12">
+                        <h2><a href="javascript:void(0);" class="btn btn-xs btn-link btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a> All Patient</h2>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/admin/home"><i class="icon-home"></i></a></li>
+                            <li class="breadcrumb-item">Patient</li>
+                            <li class="breadcrumb-item active">All Patient</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-4 col-sm-12 text-right">
+                        <div class="bh_chart hidden-xs">
+                            <div class="float-left m-r-15">
+                                <small>Visitors</small>
+                                <h6 class="mb-0 mt-1"><i class="icon-user"></i> 1,784</h6>
+                            </div>
+                            <span class="bh_visitors float-right">2,5,1,8,3,6,7,5</span>
+                        </div>
+                        <div class="bh_chart hidden-sm">
+                            <div class="float-left m-r-15">
+                                <small>Visits</small>
+                                <h6 class="mb-0 mt-1"><i class="icon-globe"></i> 325</h6>
+                            </div>
+                            <span class="bh_visits float-right">10,8,9,3,5,8,5</span>
+                        </div>
+                        <div class="bh_chart hidden-sm">
+                            <div class="float-left m-r-15">
+                                <small>Chats</small>
+                                <h6 class="mb-0 mt-1"><i class="icon-bubbles"></i> 13</h6>
+                            </div>
+                            <span class="bh_chats float-right">1,8,5,6,2,4,3,2</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row clearfix">
+                <div class="col-md-12">
+                    <div class="card patients-list">
+                        <div class="header">
+                            <h2>Patients List</h2>
+                            <ul class="header-dropdown">
+                                <li><a class="tab_btn" href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Weekly">W</a></li>
+                                <li><a class="tab_btn" href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Monthly">M</a></li>
+                                <li><a class="tab_btn active" href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Yearly">Y</a></li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="javascript:void(0);">Action</a></li>
+                                        <li><a href="javascript:void(0);">Another Action</a></li>
+                                        <li><a href="javascript:void(0);">Something else</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="body">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs-new2">
+                                <li class="nav-item"><a class="nav-link active show" data-toggle="tab" href="#All">All</a></li>
+                                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#rwanda">Rwanda</a></li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content m-t-10 padding-0">
+                                <div class="tab-pane table-responsive active show" id="All">
+                                    <table class="table m-b-0 table-hover">
+                                        <thead class="thead-success">
+                                            <tr>
+                                                <th>Pat ID</th>
+                                                <th>F Name</th>
+                                                <th>Last Name</th>
+                                                <th>Age</th>
+                                                <th>Address</th>
+                                                <th>Weight</th>
+                                                <th>Gender</th>
+                                                <th>Number</th>
+                                                <th>Last Visit</th>
+                                                <th>Status</th>
+                                                <th>Condition</th>
+                                                <th>Service</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {{!-- <tr>
+                                                <td><span class="list-name">KU 00598</span></td>
+                                                <td>Emmanuel</td>
+                                                <td>Emmanuel</td>
+                                                <td>32</td>
+                                                <td>KG 123st, Kigali-Gasabo, MD 20815</td>
+                                                <td>32</td>
+                                                <td>Male</td>
+                                                <td>0788596281</td>
+                                                <td>11 Jan 2018</td>
+                                                <td><span class="badge badge-warning">Pending</span></td>
+                                            </tr> --}}
+                                            
+                                            
+                                            {{#each patient}}
+                                                <tr>
+                                                    <td><span class="list-name">KU 00598</span></td>
+                                                    <td>{{fname}}</td>
+                                                    <td>{{lname}}</td>
+                                                    <td>{{age}}</td>
+                                                    <td>{{address}}</td>
+                                                    <td>{{weight}}</td>
+                                                    <td>{{gender}}</td>
+                                                    <td>{{phone}}</td>
+                                                    <td>11 Jan 2018</td>
+                                                    <td><span class="badge badge-success">{{status}}</span></td>
+                                                    <td>{{pCondition}}</td>
+                                                    <td>{{service}}</td>
+                                                    <td><a href="/admin/patient-medical-form/{{_id}}">Medical Form</a></td>
+                                                </tr>
+                                            {{/each}}
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="tab-pane table-responsive" id="rwanda">
+                                    <table class="table m-b-0 table-hover">
+                                        <thead class="thead-dark">
+                                            <tr>
+                                                <th>Patients ID</th>
+                                                <th>First Name</th>
+                                                <th>Last Name</th>
+                                                <th>Age</th>
+                                                <th>Address</th>
+                                                <th>Weight</th>
+                                                <th>Gender</th>
+                                                <th>Number</th>
+                                                <th>Last Visit</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span class="list-name">KU 00598</span></td>
+                                                <td>Emmanuel</td>
+                                                <td>Emmanuel</td>
+                                                <td>32</td>
+                                                <td>KG 123st, Kigali-Gasabo, MD 20815</td>
+                                                <td>32</td>
+                                                <td>Male</td>
+                                                <td>0788596281</td>
+                                                <td>11 Jan 2018</td>
+                                                <td><span class="badge badge-success">Approved</span></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><span class="list-name">KU 00598</span></td>
+                                                <td>Emmanuel</td>
+                                                <td>Emmanuel</td>
+                                                <td>32</td>
+                                                <td>KG 123st, Kigali-Gasabo, MD 20815</td>
+                                                <td>32</td>
+                                                <td>Male</td>
+                                                <td>0788596281</td>
+                                                <td>11 Jan 2018</td>
+                                                <td><span class="badge badge-success">Approved</span></td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+
+    <!-- Javascript -->
+    <script src="/assets/assets/bundles/libscripts.bundle.js"></script>
+    <script src="/assets/assets/bundles/vendorscripts.bundle.js"></script>
+
+    <script src="/assets/assets/bundles/mainscripts.bundle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <meta name="keyword" content=" nextreflexes.com, next reflex,Genuine Reflexology Center, Reflexology In Kigali, Massage in Kigali, Physiotherapy in KIgali Rwanda">
+    <meta name="author" content="WrapTheme, design by: Emmanuel NTIVUGURUZWA">
+    <link rel="shortcut icon" href="/images/icons/icon-48x48.png" />
+
+    <title>Settings | Reflexology.com</title>
+
+    <link href="/css/app.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="sidebar" class="sidebar">
+            <div class="sidebar-content js-simplebar">
+                <a class="sidebar-brand" href="/user/home">
+                    <span class="align-middle">Reflexology</span>
+                </a>
+
+                <ul class="sidebar-nav">
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="/user/home">
+                            <i class="align-middle" data-feather="home"></i> <span class="align-middle">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">
+                            <i class="align-middle" data-feather="user"></i> <span class="align-middle">Payment</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item  active">
+                        <a class="sidebar-link" href="/user/settings">
+                            <i class="align-middle" data-feather="settings"></i> <span class="align-middle">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="sidebar-cta">
+                    <ul class="sidebar-nav">
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="#">
+                                <span class="align-middle">&copy; Emmanuel NTIVUGURUZWA</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!--	user navbar	-->
+        {{>user_nav_bar}}
+
+        <main class="content">
+            <div class="container-fluid p-0">
+                <div class="row mb-2 mb-xl-3">
+
+                    <div class="col-auto d-none d-sm-block">
+                        <h3><strong>Settings</strong> Page</h3>
+                    </div>
+
+                    <div class="col-auto ml-auto text-right mt-n1">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb bg-transparent p-0 mt-1 mb-0">
+                                <li class="breadcrumb-item"><a href="/user/home">My Dashboard</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Settings</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="list-group list-group-flush" role="tablist">
+                                <a class="list-group-item list-group-item-action active" data-toggle="list" href="#account" role="tab">
+					          Profile
+					        </a>
+
+                                <a class="list-group-item list-group-item-action" data-toggle="list" href="#password" role="tab">
+					          Password
+					        </a>
+
+                                <a class="list-group-item list-group-item-action" data-toggle="list" href="#payment" role="tab">
+					          Payment methods
+					        </a>
+
+                                <a class="list-group-item list-group-item-action" data-toggle="list" href="#notification" role="tab">
+					          Notification Settings
+					        </a>
+
+                                <a class="list-group-item list-group-item-action" data-toggle="list" href="#personalization" role="tab">
+					          Personalization and data
+					        </a>
+
+                                <a class="list-group-item list-group-item-action" data-toggle="list" href="#deactivation" role="tab">
+					          Deactivation
+					        </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-8">
+                        {{#if message}}
+                            <div style="text-align: center" class="alert alert-{{message.type}}">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            <strong>{{message.intro}}</strong> {{message.message}}
+                            </div>
+                        {{/if}}
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="account" role="tabpanel">
+
+                                <div class="card">
+                                    <div class="card-header">
+
+                                        <h5 class="card-title mb-0">Public info</h5>
+                                    </div>
+                                    <div class="card-body">
+
+
+                                        <form action="/user/settings/update-profile-picture" method="POST" enctype="multipart/form-data">
+                                            <div class="row">
+                                                <div class="col-md-8">
+                                                    <div class="form-group">
+                                                        <label for="inputUsername">Username</label>
+                                                        <input name="username" type="text" name="username" class="form-control" id="inputUsername" placeholder="Username">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="inputEmail4">Email address</label>
+                                                        <input type="text" class="form-control" id="inputEmail" placeholder="{{user.email}}">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <div class="text-center">
+                                                        <img alt="Emmanuel" src="{{user.profilePhoto}}" class="rounded-circle img-responsive mt-2" width="128" height="128" />
+                                                        <div class="mt-2">
+                                                            <input type="file" class="fas fa-upload" name="upload">
+                                                            {{!-- <span  class="btn btn-success"><i class="fas fa-upload"></i> Upload</span> --}}
+                                                        </div>
+                                                        <small>For best results, use an image at least 128px by 128px in .jpg format</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <button type="submit" id="submit" class="btn btn-success">Save changes</button>
+                                        </form>
+
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header">
+
+                                        <h5 class="card-title mb-0">Private info</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <form action="/user/settings/update-private-information" method="POST">
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputFirstName">First name</label>
+                                                    <input type="text" name="fname" class="form-control" id="inputFirstName" placeholder="{{user.fname}}">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputLastName">Last name</label>
+                                                    <input type="text" name="lname" class="form-control" id="inputLastName" placeholder="{{user.lname}}">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputPhoneNumber1">Phone</label>
+                                                    <input type="text" name="phone" class="form-control" id="inputPhoneNumber1" placeholder="{{user.phone}}">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputPhoneNumber2">Phone 2</label>
+                                                    <input type="text" name="phone2" class="form-control" id="inputPhoneNumber2" placeholder="{{user.phone2}}">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="inputAddress">Address</label>
+                                                <input type="text" name="address" class="form-control" id="inputAddress" placeholder="{{user.address}}">
+                                            </div>
+
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputCity">City</label>
+                                                    <input type="text" class="form-control" id="inputCity">
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label for="inputState">State</label>
+                                                    <select name="nationality" id="inputState" class="form-control">
+                                                        <option value="">Choose...</option>
+                                                        <option value="Rwanda">Rwanda</option>
+                                                        <option value="Burundi">Burundi</option>
+                                                        <option value="Kenya">Kenya</option>
+                                                        <option value="Tanzania">Tanzania</option>
+                                                        <option value="Congo">Congo</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-md-2">
+                                                    <label for="inputZip">Zip Code</label>
+                                                    <input type="text" name="zipcode" class="form-control" id="inputZip" required>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-success">Save changes</button>
+                                        </form>
+
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                            <div class="tab-pane fade" id="password" role="tabpanel">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Password</h5>
+
+                                        <form action="/user/settings/change-password" method="POST">
+                                            <div class="form-group">
+                                                <label for="inputPasswordCurrent">Current password</label>
+                                                <input type="password" name="currentPassword" class="form-control" id="inputPasswordCurren" required>
+                                                <small><a href="#">Forgot your password?</a></small>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputPasswordNew">New password</label>
+                                                <input type="password" name="newPassword" class="form-control" id="inputPasswordNew" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputPasswordNew2">Confirm password</label>
+                                                <input type="password" name="confirmPassword" class="form-control" id="inputPasswordNew2" required> 
+                                            </div>
+                                            <button type="submit" class="btn btn-success">Save changes</button>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="payment" role="tabpanel">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Payment methods</h5>
+                                        <p>Place your next order fast and easy by adding a payment method now!</p>
+                                        <form>
+                                            <div class="card-body" style="background: #e6f2ff">
+                                                <h5 class="card-title mb-4">Payment Card</h5>
+                                                <h1 class="display-5 mt-1 mb-3">{{user.phone}}</h1>
+                                                <div class="mb-1">
+                                                    <a href="#">Remove Current Payment Method</a>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-group">
+                                                <label for="inputPaymnetCurrent">Add New Payment Number</label>
+                                                <input type="number" class="form-control" id="inputPasswordCurrent">
+                                            </div>
+                                            <button type="submit" class="btn btn btn-success">Save changes</button>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="notification" role="tabpanel">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Notification Settings</h5> <br>
+
+                                        <form>
+                                            <div class="form-group">
+                                                <h5><strong>New Messages</strong> </h5>
+                                                <label class="custom-control custom-checkbox">
+										          <input type="checkbox" class="custom-control-input" checked>
+										          <span class="custom-control-label">Notify me about new messages</span>
+		        							</label>
+                                                <hr>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <h5><strong>Updates</strong> </h5>
+                                                <label class="custom-control custom-checkbox">
+										          <input type="checkbox" class="custom-control-input" checked>
+										          <span class="custom-control-label">Notify me about new updates from Reflexology</span>
+		        							</label>
+
+                                                <hr>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <h5><strong>Deals and Promotions</strong> </h5>
+                                                <label class="custom-control custom-checkbox">
+										          <input type="checkbox" class="custom-control-input" checked>
+										          <span class="custom-control-label">Notify me when there are offers that might interest me</span>
+		        							</label>
+                                            </div>
+                                            <br>
+                                            <button type="submit" class="btn btn btn-success">Save changes</button>
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="personalization" role="tabpanel">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Personalization and data</h5> <br>
+
+                                        <form>
+                                            <div class="form-group">
+                                                <h5><strong>Personalized ads</strong> </h5>
+                                                <label class="custom-control custom-checkbox">
+										          <input type="checkbox" class="custom-control-input">
+										          <span class="custom-control-label">You will always see ads on Reflexology based on your activities</span>
+		        							</label>
+                                                <hr>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <h5><strong>Personalized based on your inferred identity</strong> </h5>
+                                                <label class="custom-control custom-checkbox">
+										          <input type="checkbox" class="custom-control-input">
+										          <span class="custom-control-label">Reflexology will personalize your experience based on information you have provided and the device you are using.</span>
+		        							</label>
+
+                                                <hr>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <h5><strong>Allow additional information sharing with business partners</strong> </h5>
+                                                <label class="custom-control custom-checkbox">
+										          <input type="checkbox" class="custom-control-input" checked>
+										          <span class="custom-control-label">
+																Reflexology always share information with business partners as a way to run and improve its product.
+																When enabled, Reflexology will be able to share your information to its partners to help support
+																Reflexology's products and services.
+															</span>
+		        							</label>
+                                            </div>
+                                            <br>
+                                            <button type="submit" class="btn btn btn-success">Save changes</button>
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="deactivation" role="tabpanel">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Deactivate your account</h5> <br>
+
+                                        <form>
+                                            <div class="form-group">
+                                                <h5><strong>This will deactivate your account</strong> </h5>
+                                                <p>
+                                                    You are about to start the process of deactivating your Reflexology account. Your display name, @username, and public information will no longer be viewable on Reflexology.rw, and all other platforms of Reflexology.
+                                                </p>
+                                                <hr>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <h5><strong>What else you should know</strong> </h5>
+                                                <p>
+                                                    You can restore your account if it was accidentally or wrongfully deactivated for up to 30 days after deactivation. <br> If you want to change your @username, you don't need to deactivate your account
+                                                    - Edit it in your <a href="#">Settings</a>. If you want to download <a href="#">your data</a>, you'll need to send us a request and redeem your data.
+                                                </p>
+                                            </div>
+
+                                            <br>
+                                            <button type="submit" class="btn btn-danger">Deactivate</button>
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- foooter-->
+
+
+    </div>
+    </div>
+
+    <script>
+        const $myform1 = document.getElementById('form1')
+        const $inputUsername = document.getElementById('inputUsername')
+        const $inputEmail = document.getElementById('inputEmail')
+
+
+        $myform1.addEventListener('submit', e => {
+            e.preventDefault()
+
+            const username = $inputUsername.value
+            const email = $inputEmail.value
+
+
+        })
+    </script>
+
+    <script src="/js/vendor.js"></script>
+    <script src="/js/app.js"></script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="emmanuel NTIVUGURUZWA">
+    <meta name="keyword" content=" nextreflexes.com, next reflex,Genuine Reflexology Center, Reflexology In Kigali, Massage in Kigali, Physiotherapy in KIgali Rwanda">
+    <meta name="author" content="WrapTheme, design by: Emmanuel NTIVUGURUZWA">
+    <link rel="shortcut icon" href="/images/icons/icon-48x48.png" />
+
+    <title>Home | Reflexology.com</title>
+
+    <link href="/css/app.css" rel="stylesheet">
+    {{!-- Additional CSS FOR VIDEO --}}
+     <link rel="stylesheet" href="/css/videoPage/style.css">
+    <link rel="stylesheet" href="/css/videoPage/linearicons.css">
+    <link rel="stylesheet" href="/css/videoPage/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/videoPage/themify-icons.css">
+    <link rel="stylesheet" href="/css/videoPage/bootstrap.css">
+    <link rel="stylesheet" href="/css/videoPage/owl.carousel.css">
+    <link rel="stylesheet" href="/css/videoPage/nice-select.css">
+    <link rel="stylesheet" href="/css/videoPage/nouislider.min.css">
+    <link rel="stylesheet" href="/css/videoPage/ion.rangeSlider.css" />
+    <link rel="stylesheet" href="/css/videoPage/ion.rangeSlider.skinFlat.css" />
+    <link rel="stylesheet" href="/css/videoPage/magnific-popup.css">
+    <link rel="stylesheet" href="/css/videoPage/main.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="sidebar" class="sidebar">
+            <div class="sidebar-content js-simplebar">
+                <a class="sidebar-brand" href="/user/home">
+                    <span class="align-middle">REFLEXOLOGY</span>
+                </a>
+
+                <ul class="sidebar-nav">
+
+                
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="/user/home">
+                            <i class="align-middle" data-feather="bell"></i> <span class="align-middle">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">
+                            <i class="align-middle" data-feather="user"></i> <span class="align-middle">Payment</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="/user/settings">
+                            <i class="align-middle" data-feather="settings"></i> <span class="align-middle">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="sidebar-cta">
+                    <ul class="sidebar-nav">
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="#">
+                                <span class="align-middle">&copy; Emmanuel NTIVUGURUZWA</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!--	user navbar	-->
+        {{>user_nav_bar}}
+                         {{#if message}}
+                            <div style="text-align: center" class="alert alert-{{message.type}}">
+                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                <strong>{{message.intro}}</strong> {{message.message}}
+                            </div>
+                        {{/if}}
+
+        <main class="content">
+            <div class="container-fluid p-0">
+
+                <div class="row mb-2 mb-xl-3">
+                    <div class="col-auto d-none d-sm-block">
+                        <h3><strong>My</strong> Dashboard</h3>
+                    </div>
+
+                    <div class="col-auto ml-auto text-right mt-n1">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb bg-transparent p-0 mt-1 mb-0">
+                                <li class="breadcrumb-item"><a href="/user/home">My Dashboards</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Home</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+        </main>
+                        {{!-- Error Message --}}
+
+        <div class="paymentsError">
+            <div class="alert  bg-warning text-center" style="border-radius: 2rem;"><p>Hello {{user.fname}}, <br/> Welcome At Genuine Reflexology Center Learing Place, where you should learing More About Reflexology Throught The Videos, Without Going To Medical Center. Before Watching Any Video on this website you have to buy Watching Menbership! Which is 10$ per 60 Days To get Access on The Videos. Access will be within 2 months stating on the Date of Payment, Please Click on Pay button to start payment process.</p></div>
+
+           
+        </div>
+        <div class="pay-btn">
+             <button class="btn btn-success text-center btn-style" style="border-radius: 2rem;" > <a href="/user/payment"> Pay Now</a></button>
+        </div>
+
+                        {{!-- End Of Error Message --}}
+
+
+        <div class="image-area">
+
+            <div class="single-img">
+                <img src="/images/videoPage/Reflexology1.png" style="height: 300px; width: 300px;">
+                <img src="/images/videoPage/play.png" class="play-btn" onclick="playVideo('https://quickly.nextreflexe.com/video/reflexology2.mp4')">
+                <div class="subtitble" style="width: 260px; font-family:Georgia, 'Times New Roman', Times, serif;">
+                    <h5>Learn How You can Be Reflex Part 1</h5>
+                    <div class="btn">
+                        <button class="btn btn-success" style="position: relative; left: 50%">Download</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="single-img">
+                <img src="/images/videoPage/3.jpg" style="height: 300px; width: 300px;">
+                <img src="/images/videoPage/play.png" class="play-btn" onclick="playVideo('https://quickly.nextreflexe.com/video/reflexology2.mp4')">
+                <div class="subtitble" style="width: 260px;">
+                    <h5>Learn How You can Be Reflex Part 2</h5>
+                     <div class="btn">
+                        <button class="btn btn-success" style="position: relative; left: 50%">Download</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="single-img">
+                <img src="/images/videoPage/1.jpg" style="height: 300px; width: 300px;">
+                <img src="/images/videoPage/play.png" class="play-btn" onclick="playVideo('/images/videoPage/https://quickly.nextreflexe.com/video/reflexology2.mp4')">
+                <div class="subtitble" style="width: 260px;">
+                    <h5>Learn How You can Be Reflex Part 3</h5>
+                     <div class="btn">
+                        <button class="btn btn-success" style="position: relative; left: 50%">Download</button>
+                    </div>
+                </div>
+            </div>
+            <div class="single-img">
+                <img src="/images/videoPage/3.jpg" style="height: 300px; width: 300px;">
+                <img src="/images/videoPage/play.png" class="play-btn" onclick="playVideo('/images/videoPage/https://quickly.nextreflexe.com/video/reflexology2.mp4')">
+                <div class="subtitble" style="width: 260px;">
+                    <h5>Learn How You can Be Reflex Part 4</h5>
+                     <div class="btn">
+                        <button class="btn btn-success" style="position: relative; left: 50%">Download</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="video-player" id="videoPlayer">
+            <video width="800" height="500" controls autoplay id="myvideo">
+                <source src="/images/videoPage/vid1.mp4"  type="video/mp4" id="myvideo1">
+            </video>
+            <img src="/images/videoPage/close.png" class="close-btn" onclick="closeVideo()">
+        </div>
+
+        
+
+        <!-- foooter-->
+        {{!-- {{>user_footer}} --}}
+
+        </div>
+    </div>
+
+    <script src="/js/vendor.js"></script>
+    <script src="/js/app.js"></script>
+    
+
+    <script>
+        $(function() {
+            // Line chart
+            new Chart(document.getElementById("chartjs-line"), {
+                type: "line",
+                data: {
+                    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                    datasets: [{
+                        label: "Sales (Rwf)",
+                        fill: true,
+                        backgroundColor: "transparent",
+                        borderColor: window.theme.primary,
+                        data: [2115, 1562, 1584, 1892, 1487, 2223, 2966, 2448, 2905, 3838, 2917, 3327]
+                    }, {
+                        label: "Orders",
+                        fill: true,
+                        backgroundColor: "transparent",
+                        borderColor: "#adb5bd",
+                        borderDash: [4, 4],
+                        data: [958, 724, 629, 883, 915, 1214, 1476, 1212, 1554, 2128, 1466, 1827]
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    legend: {
+                        display: false
+                    },
+                    tooltips: {
+                        intersect: false
+                    },
+                    hover: {
+                        intersect: true
+                    },
+                    plugins: {
+                        filler: {
+                            propagate: false
+                        }
+                    },
+                    scales: {
+                        xAxes: [{
+                            reverse: true,
+                            gridLines: {
+                                color: "rgba(0,0,0,0.05)"
+                            }
+                        }],
+                        yAxes: [{
+                            ticks: {
+                                stepSize: 500
+                            },
+                            display: true,
+                            borderDash: [5, 5],
+                            gridLines: {
+                                color: "rgba(0,0,0,0)",
+                                fontColor: "#fff"
+                            }
+                        }]
+                    }
+                }
+            });
+        });
+    </script>
+
+    {{!-- <script>
+        var videoPlayer = document.getElementById("videoPlayer");
+        var myVideo = document.getElementById("myvideo");
+
+        function closeVideo() {
+            videoPlayer.style.display = "none";
+        }
+
+        function playVideo(file) {
+            myVideo.src = file;
+            videoPlayer.style.display = "block";
+            myvideo1.style.display = "none%";
+
+        }
+    </script> --}}
+
+    <script src="/js/videoPage/vendor/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="/js/videoPage/vendor/bootstrap.min.js"></script>
+    <script src="/js/videoPage/jquery.ajaxchimp.min.js"></script>
+    <script src="/js/videoPage/jquery.nice-select.min.js"></script>
+    <script src="/js/videoPage/jquery.sticky.js"></script>
+    <script src="/js/videoPage/nouislider.min.js"></script>
+    <script src="/js/videoPage/countdown.js"></script>
+    <script src="/js/videoPage/jquery.magnific-popup.min.js"></script>
+    <script src="/js/videoPage/owl.carousel.min.js"></script>
+    <!--gmaps Js-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+    <script src="/js/videoPage/gmaps.min.js"></script>
+    <script src="/js/videoPage/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+    </title>
+    <link rel="stylesheet" type="text/css" href="/payments/index.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="container">
+            <div id="info">
+                <img id="product" src="http://enwaara.se/codepen/product.png" />
+
+                <p>Genuine Reflexology Center</p>
+                <p>24 / 7</p>
+
+                <div id="price">
+                    <h2>10 000Frw</h2>
+                </div>
+            </div>
+
+            <div id="payment">
+                <form id="checkout">
+                    <script src="https://checkout.flutterwave.com/v3.js"></script>
+                    <input class="card" id="visa" type="button" name="card" value="" />
+                    <input class="card" id="mastercard" type="button" name="card" value="" />
+
+                    <label>Email</label>
+                    <input type="email" id="email" name="Email" requierd="true" maxlength="50" placeholder="Email" />
+
+                    <label>Phone Number</label>
+                    <input id="phone" type="number" pattern="[0-9]{13,16}" name="phone" requierd="true" placeholder="+250-788-596-281" />
+
+                    {{!-- <input class="btn" type="button" name="purchase" value="Continue" /> --}}
+                    <button class="btn" type="button" onClick="makePayment()">Pay Now</button>
+                </form>
+
+                
+               
+            </div>
+        </div>
+    </div>
+
+
+                {{!-- <form>
+                    <script src="https://checkout.flutterwave.com/v3.js"></script>
+                    <button type="button" onClick="makePayment()">Pay Now</button>
+                </form> --}}
+
+
+    <script>
+        function makePayment() {
+
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            FlutterwaveCheckout({
+                public_key: "FLWPUBK-3138297073746401f7ecd92029c645fc-X",
+                tx_ref: "hooli-tx-1920bbtyt",
+                amount: 10000,
+                currency: "RWF",
+                country: "rwanda",
+                payment_options: "card, mobilemoneyrwanda, ussd",
+                redirect_url: // specified redirect URL
+                    "https://callbacks.piedpiper.com/flutterwave.aspx?ismobile=34",
+                meta: {
+                    consumer_id: 23,
+                    consumer_mac: "92a3-912ba-1192a",
+                },
+                customer: {
+                    email: email,
+                    phone_number: phone
+                },
+                callback: function(data) {
+                    console.log(data);
+                },
+                onclose: function() {
+                    // close modal
+                },
+                customizations: {
+                    title: "Genuine Reflexology Center",
+                    description: "60 Days Video Lesson Subscribtion",
+                    logo: "https://assets.piedpiper.com/logo.png",
+                },
+            });
+        }
+    </script>
+
+
+</body>
+
+</html>

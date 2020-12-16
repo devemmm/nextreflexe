@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login and Registration Form</title>
+    <meta name="keyword" content=" nextreflexes.com, next reflex,Genuine Reflexology Center, Reflexology In Kigali, Massage in Kigali, Physiotherapy in KIgali Rwanda">
+    <meta name="author" content="WrapTheme, design by: Emmanuel NTIVUGURUZWA">
+    <link rel="shortcut icon" href="/images/icons/icon-48x48.png" />
+
+    <link rel="stylesheet" href="/css/registerStyle.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Overide -->
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="jquery.passwordstrength.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    
+    <!--Nav Bar-->
+    <nav class="navbar navbar-expand-lg nav-back fixed-top" id="nav">
+        <div class="container">
+            <a href="#" class="navbar-brand">Genuine Reflexology <br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Center</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-syringe fa-2x"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">Services</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">Medical Campus</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">Team</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--End of Nav Bar-->
+
+    
+
+
+
+    <div class="login-page">
+
+        {{#if message}}
+            <div style="text-align: center" class="alert alert-{{message.type}}">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>{{message.intro}}</strong> {{message.message}}
+            </div>
+        {{/if}}
+        <div class="form">
+            <form class="register-form" method="POST" action="/signup">
+                <input type="text" name="fname" placeholder="First Name" required>
+                <input type="text" name="lname" placeholder="Last Name" required>
+                <input type="text" name="phone" placeholder="Telephone" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="password" name="password2" placeholder="Confirm Password" required>
+                <button><i class="fa fa-sign-in"></i>Create</button>
+                <p class="message">Already Registered ? <a href="#">Login</a> </p>
+            </form>
+            <form class="login-form" method="POST" action="/signin">
+
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <span><i class="fa fa-envelope-o"></i></span>
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <span><i class="fa fa-key"></i></span>
+                <button type="submit" id="submitBtn"><i class="fa fa-sign-in"></i>Login</button>
+                <p class="message">Not Registered ? <a href="#">Register</a> </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER SECTION -->
+
+    <section class="footer py-4 mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-left">
+                    <i class="fa fa-copyright" aria-hidden="true"></i> Copyright &copy; reflexology2020
+                </div>
+                <div class="col-lg-4 my-3 my-lg-0">
+                    <a href="#" class="btn btn-back btn-social mx-2">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="btn btn-back btn-social mx-2">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="btn btn-back btn-social mx-2">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="btn btn-back btn-social mx-2">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                <div class="col-lg-4 text-lg-right">
+                    <a href="#" class="mr-3 text">Privacy Policy</a>
+                    <a href="#" class="text">Term of Use</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END OF FOOTER SECTION -->
+
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script>
+        $('.message a').click(function() {
+            $('form').animate({
+                height: "toggle",
+                opacity: "toggle"
+            }, "slow");
+        });
+    </script>
+</body>
+
+</html>

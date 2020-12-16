@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Genuene | Reflexology Widgets Weather</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="keyword" content=" nextreflexes.com, next reflex,Genuine Reflexology Center, Reflexology In Kigali, Massage in Kigali, Physiotherapy in KIgali Rwanda">
+    <meta name="author" content="WrapTheme, design by: Emmanuel NTIVUGURUZWA">
+    <link rel="shortcut icon" href="/images/icons/icon-48x48.png" />
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- VENDOR CSS -->
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/vendor/font-awesome/css/font-awesome.min.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="/assets/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/assets/css/color_skins.css">
+</head>
+
+<body class="theme-green">
+
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="m-t-30"><img src="/assets/images/logo-icon.svg" width="48" height="48" alt="Lucid"></div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- Overlay For Sidebars -->
+
+    <div id="wrapper">
+
+        {{!-- Admin Navbar --}}
+
+        {{>admin_nav_bar}}
+
+        <div id="left-sidebar" class="sidebar">
+            <div class="sidebar-scroll">
+                <div class="user-account">
+                    <img src="{{user.profilePhoto}}" class="rounded-circle user-photo" alt="User Profile Picture">
+                    <div class="dropdown">
+                        <span>Welcome,</span>
+                        <a href="javascript:void(0);" class="dropdown-toggle user-name" data-toggle="dropdown"><strong>Dr. {{user.fname}}  {{user.lname}}</strong></a>
+                        <ul class="dropdown-menu dropdown-menu-right account">
+                            <li><a href="/admin/home"><i class="icon-user"></i>My Profile</a></li>
+                            <li><a href="/admin/home"><i class="icon-envelope-open"></i>Messages</a></li>
+                            <li><a href="javascript:void(0);"><i class="icon-settings"></i>Settings</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/admin/logout"><i class="icon-power"></i>Logout</a></li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <ul class="row list-unstyled">
+                        <li class="col-4">
+                            <small>Exp</small>
+                            <h6>14</h6>
+                        </li>
+                        <li class="col-4">
+                            <small>Awards</small>
+                            <h6>13</h6>
+                        </li>
+                        <li class="col-4">
+                            <small>Clients</small>
+                            <h6>213</h6>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#sub_menu"><i class="icon-grid"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Chat"><i class="icon-book-open"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#setting"><i class="icon-settings"></i></a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <!-- Tab panes -->
+                <div class="tab-content p-l-0 p-r-0">
+                    <div class="tab-pane active" id="menu">
+                        <nav class="sidebar-nav">
+                            <ul class="main-menu metismenu">
+                                <li><a href="/admin/home"><i class="icon-home"></i><span>Dashboard</span></a></li>
+                                <li><a href="/admin/appointment"><i class="icon-calendar"></i>Appointment</a></li>
+                                <li><a href="/admin/taskboard"><i class="icon-list"></i>Taskboard</a></li>
+
+                                <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-user"></i><span>Patients</span> </a>
+                                    <ul>
+                                        <li><a href="/admin/all-patients">All Patients</a></li>
+                                        <li><a href="/admin/add-patient">Add Patient</a></li>
+                                        <li><a href="/admin/patient-medical-form">Medical Form</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="/admin/world-wide-center"><i class="icon-pointer"></i>WorldWide Centres</a></li>
+
+                                <li class="active">
+                                    <a href="#Widgets" class="has-arrow"><i class="icon-puzzle"></i><span>Widgets</span></a>
+                                    <ul>
+                                        <li><a href="/admin/statistics-widget">Statistics Widgets</a></li>
+                                        <li><a href="/admin/weather-Widget">Weather Widgets</a></li>
+                                        <li><a href="/admin/weather-Widget">Weather Widgets</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="tab-pane" id="sub_menu">
+                        <nav class="sidebar-nav">
+                            <ul class="main-menu metismenu">
+                                <li>
+                                    <a href="#uiElements" class="has-arrow"><i class="icon-diamond"></i> <span>UI Elements</span></a>
+                                    <ul>
+                                        <li><a href="#">Typography</a></li>
+
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#forms" class="has-arrow"><i class="icon-pencil"></i> <span>Forms</span></a>
+                                    <ul>
+                                        <li><a href="#">Form Validation</a></li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="tab-pane p-l-15 p-r-15" id="Chat">
+                        <form>
+                            <div class="input-group m-b-20">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="icon-magnifier"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Search...">
+                            </div>
+                        </form>
+
+                    </div>
+                    <div class="tab-pane p-l-15 p-r-15" id="setting">
+                        <h6>Choose Skin</h6>
+                        <ul class="choose-skin list-unstyled">
+                            <li data-theme="purple">
+                                <div class="purple"></div>
+                                <span>Purple</span>
+                            </li>
+                            <li data-theme="blue">
+                                <div class="blue"></div>
+                                <span>Blue</span>
+                            </li>
+                            <li data-theme="cyan" class="active">
+                                <div class="cyan"></div>
+                                <span>Cyan</span>
+                            </li>
+                            <li data-theme="green">
+                                <div class="green"></div>
+                                <span>Green</span>
+                            </li>
+                            <li data-theme="orange">
+                                <div class="orange"></div>
+                                <span>Orange</span>
+                            </li>
+                            <li data-theme="blush">
+                                <div class="blush"></div>
+                                <span>Blush</span>
+                            </li>
+                        </ul>
+                        <hr>
+                        <h6>General Settings</h6>
+                        <ul class="setting-list list-unstyled">
+                            <li>
+                                <label class="fancy-checkbox">
+                                <input type="checkbox" name="checkbox">
+                                <span>Report Panel Usag</span>
+                            </label>
+                            </li>
+                            <li>
+                                <label class="fancy-checkbox">
+                                <input type="checkbox" name="checkbox">
+                                <span>Email Redirect</span>
+                            </label>
+                            </li>
+                            <li>
+                                <label class="fancy-checkbox">
+                                <input type="checkbox" name="checkbox" checked>
+                                <span>Notifications</span>
+                            </label>
+                            </li>
+                            <li>
+                                <label class="fancy-checkbox">
+                                <input type="checkbox" name="checkbox" checked>
+                                <span>Auto Updates</span>
+                            </label>
+                            </li>
+                            <li>
+                                <label class="fancy-checkbox">
+                                <input type="checkbox" name="checkbox">
+                                <span>Offline</span>
+                            </label>
+                            </li>
+                            <li>
+                                <label class="fancy-checkbox">
+                                <input type="checkbox" name="checkbox" checked>
+                                <span>Location Permission</span>
+                            </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <div class="row">
+                    <div class="col-lg-6 col-md-8 col-sm-12">
+                        <h2><a href="javascript:void(0);" class="btn btn-xs btn-link btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a> Widgets Weather</h2>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/admin/home"><i class="icon-home"></i></a></li>
+                            <li class="breadcrumb-item">Widgets</li>
+                            <li class="breadcrumb-item active">Widgets Weather</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-4 col-sm-12 text-right">
+                        <div class="bh_chart hidden-xs">
+                            <div class="float-left m-r-15">
+                                <small>Visitors</small>
+                                <h6 class="mb-0 mt-1"><i class="icon-user"></i> 1,784</h6>
+                            </div>
+                            <span class="bh_visitors float-right">2,5,1,8,3,6,7,5</span>
+                        </div>
+                        <div class="bh_chart hidden-sm">
+                            <div class="float-left m-r-15">
+                                <small>Visits</small>
+                                <h6 class="mb-0 mt-1"><i class="icon-globe"></i> 325</h6>
+                            </div>
+                            <span class="bh_visits float-right">10,8,9,3,5,8,5</span>
+                        </div>
+                        <div class="bh_chart hidden-sm">
+                            <div class="float-left m-r-15">
+                                <small>Chats</small>
+                                <h6 class="mb-0 mt-1"><i class="icon-bubbles"></i> 13</h6>
+                            </div>
+                            <span class="bh_chats float-right">1,8,5,6,2,4,3,2</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row clearfix">
+                <div class="col-lg-4 col-md-12">
+                    <div class="card weather2">
+                        <div class="body city-selected">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="city"><span>City:</span> Kigali Kimironko</div>
+                                    <div class="night">Day - 12:07 PM</div>
+                                </div>
+                                <div class="info col-7">
+                                    <div class="temp">
+                                        <h2>34°</h2>
+                                    </div>
+                                </div>
+                                <div class="icon col-5">
+                                    <i class="wi wi-day-cloudy-windy"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <table class="table table-striped m-b-0">
+                            <tbody>
+                                <tr>
+                                    <td>Land area</td>
+                                    <td class="font-medium">121.4 km²</td>
+                                </tr>
+                                <tr>
+                                    <td>Humidity</td>
+                                    <td class="font-medium">73%</td>
+                                </tr>
+                                <tr>
+                                    <td>Pressure</td>
+                                    <td class="font-medium">25.56 in</td>
+                                </tr>
+                                <tr>
+                                    <td>Population</td>
+                                    <td class="font-medium">8.65 lakhs</td>
+                                </tr>
+                                <tr>
+                                    <td>Ceiling</td>
+                                    <td class="font-medium">25280 ft</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner" role="listbox">
+                                <div class="carousel-item text-center">
+                                    <div class="col-12">
+                                        <ul class="row days-list list-unstyled">
+                                            <li class="day col-4">
+                                                <p>Monday</p>
+                                                <i class="wi wi-day-hail"></i>
+                                            </li>
+                                            <li class="day col-4">
+                                                <p>Tuesday</p>
+                                                <i class="wi wi-day-lightning"></i>
+                                            </li>
+                                            <li class="day col-4">
+                                                <p>Wednesday</p>
+                                                <i class="wi wi-day-storm-showers"></i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="carousel-item text-center active">
+                                    <div class="col-12">
+                                        <ul class="row days-list list-unstyled">
+                                            <li class="day col-4">
+                                                <p>Thursday</p>
+                                                <i class="wi wi-day-hail"></i>
+                                            </li>
+                                            <li class="day col-4">
+                                                <p>Friday</p>
+                                                <i class="wi wi-showers"></i>
+                                            </li>
+                                            <li class="day col-4">
+                                                <p>Saturday</p>
+                                                <i class="wi wi-day-sunny"></i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card weather4">
+                        <div class="body">
+                            <div class="row">
+                                <div class="col-6">
+                                    <i class="wi wi-day-sunny"></i>
+                                    <p>City</p>
+                                </div>
+                                <div class="col-6 text-right">
+                                    <h3 class="">27° <span>C</span> </h3>
+                                    <span>Fri 20/5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card weather5">
+                        <div class="widget">
+                            <div class="weatherIcon"><i class="wi wi wi-day-cloudy"></i></div>
+                            <div class="weatherInfo">
+                                <div class="temperature"><span>25°</span></div>
+                                <div class="description">
+                                    <div class="weatherCondition">CLOUDY</div>
+                                    <div class="place">Kigali, Rwanda</div>
+                                </div>
+                            </div>
+                            <div class="date">1st Jun</div>
+                        </div>
+                    </div>
+                    <div class="card weather6 l-amber">
+                        <div class="body">
+                            <div class="p-15">
+                                <div class="temp">27°<span>C</span>
+                                    <i class="wi wi-day-cloudy-windy"></i>
+                                </div>
+                            </div>
+                            <p>Saturday 12 May</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card weather3">
+                        <div class="top">
+                            <div class="wrapper">
+                                <h2 class="heading">Clear night</h2>
+                                <h3 class="location"></h3>Kigali, Rwanda</h3>
+                                <p class="temp">
+                                    <span class="temp-value">23</span>
+                                    <span class="deg">0</span>
+                                    <a href="javascript:void(0);"><span class="temp-type">C</span></a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <ul class="forecast">
+                                <li class="active">
+                                    <span class="date">Yesterday</span>
+                                    <span class="wi wi-day-hail condition">
+                                        <span class="temp">23<span class="deg">0</span><span class="temp-type">C</span></span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="date">Tomorrow</span>
+                                    <span class="wi wi-day-hail condition">
+                                        <span class="temp">21<span class="deg">0</span><span class="temp-type">C</span></span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12">
+                    <div class="card weather">
+                        <div class="header">
+                            <h2>Weather</h2>
+                        </div>
+                        <div class="body">
+                            <div class="city">
+                                <span>sky is clear</span>
+                                <h3>Kigali Rwanda</h3>
+                                <i class="wi wi-day-sunny-overcast"></i>
+                            </div>
+                            <ul class="row days list-unstyled m-b-0">
+                                <li>
+                                    <h5>SUN</h5>
+                                    <i class="wi wi-rain"></i>
+                                    <span class="degrees">77</span>
+                                </li>
+                                <li>
+                                    <h5>MON</h5>
+                                    <i class="wi wi-cloudy"></i>
+                                    <span class="degrees">81</span>
+                                </li>
+                                <li>
+                                    <h5>TUE</h5>
+                                    <i class="wi wi-rain-wind"></i>
+                                    <span class="degrees">82</span>
+                                </li>
+                                <li>
+                                    <h5>WED</h5>
+                                    <i class="wi wi-lightning"></i>
+                                    <span class="degrees">82</span>
+                                </li>
+                                <li>
+                                    <h5>THU</h5>
+                                    <i class="wi wi-day-cloudy-gusts"></i>
+                                    <span class="degrees">81</span>
+                                </li>
+                                <li>
+                                    <h5>FRI</h5>
+                                    <i class="wi wi-day-showers"></i>
+                                    <span class="degrees">67</span>
+                                </li>
+                                <li>
+                                    <h5>SAT</h5>
+                                    <i class="wi wi-day-snow"></i>
+                                    <span class="degrees">81</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <!-- Javascript -->
+    <script src="/assets/assets/bundles/libscripts.bundle.js"></script>
+    <script src="/assets/assets/bundles/vendorscripts.bundle.js"></script>
+
+    <script src="/assets/assets/bundles/mainscripts.bundle.js"></script>
+</body>
+
+</html>

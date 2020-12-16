@@ -1,0 +1,96 @@
+.wrapper h4 {
+    text-align: center;
+    font-size: 30px;
+    font-family: Audiowide;
+    margin-top: 8rem;
+}
+
+.image-area {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 105%;
+    margin-left: 1%;
+}
+
+.single-img {
+    padding: 0 20px 20px;
+}
+
+.single-img .play-btn {
+    width: 35px;
+}
+
+img:hover {
+    opacity: 0.5;
+    transition: 0.9s;
+}
+
+.single-img .play-btn {
+    width: 35px;
+    display: flex;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -200%);
+    cursor: pointer;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 29%;
+    width: 30px;
+    cursor: pointer;
+}
+
+.video-player {
+    width: 80%;
+    position: absolute;
+    left: 56%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    display: none;
+    margin-top: 10rem;
+}
+
+video:focus {
+    outline: none;
+}
+
+video {
+    height: 10%;
+}
+
+@media (max-width: 991px) {
+    .video-player {
+        /* width: 100%;
+    height: 100%; */
+        left: 40%;
+        /* object-fit: fill; */
+    }
+}
+
+.paymentsError {
+    margin: 0 5px 0 5px;
+}
+
+.paymentsError p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
+    color: rgb(153, 15, 15);
+    display: flex;
+    align-items: center;
+}
+
+.pay-btn {
+    width: 100%;
+    display: flex;
+}
+
+.btn-style {
+    position: relative;
+    left: 45%;
+    margin-bottom: 10px;
+}
