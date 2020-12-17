@@ -14,6 +14,7 @@ const adminRouters = require('./routers/adminRoutes')
 const port = process.env.PORT || 3000
 
 const app = express()
+app.use(enforce.HTTPS({ trustProtoHeader: true }))
 
 // Define Path for Expore Configuration
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -24,7 +25,6 @@ const partialPath = path.join(__dirname, '../templete/partials')
 // Set Up handbars Engine and views Location
 app.set('view engine', 'hbs')
 app.set('views', viewsPath)
-app.use(enforce.HTTPS())
 app.use(express.static(publicDirectoryPath))
 app.use(express.static(publicDirectoryPathFiles))
 
