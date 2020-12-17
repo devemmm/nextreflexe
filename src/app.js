@@ -1,6 +1,8 @@
 require('./database/reflDb')
 const path = require('path')
+const http = require('http')
 const express = require('express')
+const enforce = require('express-sslify')
 const cookieParser = require('cookie-parser')
 const session = require('express-session')
 const bodyParser = require('body-parser')
@@ -22,6 +24,7 @@ const partialPath = path.join(__dirname, '../templete/partials')
 // Set Up handbars Engine and views Location
 app.set('view engine', 'hbs')
 app.set('views', viewsPath)
+app.use(enforce.HTTPS())
 app.use(express.static(publicDirectoryPath))
 app.use(express.static(publicDirectoryPathFiles))
 
@@ -47,4 +50,4 @@ app.use(userRouters)
 app.use(publicRouters)
 app.use(adminRouters)
 
-app.listen(port, () => console.log(`Server is running on port ${port}`))
+http.createServer(app).listen(port, () => console.log(`Server is running on port ${port}`))
