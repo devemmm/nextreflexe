@@ -51,3 +51,5 @@ app.use(publicRouters)
 app.use(adminRouters)
 
 http.createServer(app).listen(port, () => console.log(`Server is running on port ${port}`))
+
+// app.listen(port, () => console.log(`Server is running on port ${port}`))

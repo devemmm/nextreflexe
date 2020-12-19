@@ -8,6 +8,7 @@ const {
     userLogout,
     updateProfile,
     updateProfileInformation,
+    updateStatus,
     changePassword
 } = require('../controller/private')
 
@@ -26,8 +27,9 @@ router.post('/user/settings/change-password', requireAuthorization, changePasswo
 router.get('/user/logout', requireAuthorization, userLogout)
 
 router.get('/user/payment', requireAuthorization, (req, res) => {
-    res.render('flutterWave', { user: req.user })
+    res.render('flutterWave')
 })
 
+router.get('/user/updateStatus', requireAuthorization, updateStatus)
 
 module.exports = router

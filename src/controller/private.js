@@ -590,6 +590,38 @@ const changePassword = [
 ]
 
 
+const updateStatus = [
+    async(req, res) => {
+        try {
+
+            const user = await User.findById({ _id: req.user._id })
+
+
+            if (!user) {
+                return res.send({ msg: 'User Not Founds' })
+            }
+
+            user.hasAccess = true
+
+            await user.save()
+
+            req.session.message = {
+                type: 'success',
+                intro: 'You Have fineshed to Pay Now you can Wortch the Video',
+                message: ''
+            }
+            res.status(200).redirect('/user/home')
+
+        } catch (error) {
+            if (error.kind === "ObjectId") {
+                return res.status(400).send({ error: 'Invalid Object id' })
+            }
+            return res.status(500).send(error)
+        }
+    }
+]
+
+
 module.exports = {
     home,
     allPatients,
@@ -611,6 +643,6 @@ module.exports = {
     videoLesson,
     updateProfile,
     updateProfileInformation,
+    updateStatus,
     changePassword
-
 }
